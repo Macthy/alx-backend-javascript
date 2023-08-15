@@ -1,4 +1,3 @@
-// Returns a string describing the preference for using const when possible
 export function taskFirst() {
   const task = 'I prefer const when I can.'; // Declare a constant variable
   return task;
