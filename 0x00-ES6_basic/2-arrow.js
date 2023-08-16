@@ -7,5 +7,3 @@ export default function getNeigborhoodsList() {
     return self.sanFranciscoNeighborhoods;
   };
 }
-
-
