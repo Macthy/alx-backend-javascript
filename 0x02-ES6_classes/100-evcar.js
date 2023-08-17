@@ -1,5 +1,3 @@
-// 10-evcar.js
-
 import Car from './10-car';
 
 class EVCar extends Car {

@@ -1,12 +1,3 @@
-// 9-hoisting.js
-
-/**
- * Define a class in Holberton
- *
- * @class HolbertonClass
- */
-
-/* eslint-disable */
 export class HolbertonClass {
   constructor(year, location) {
     this._year = year;

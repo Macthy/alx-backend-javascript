@@ -1,9 +1,3 @@
-// 5-building.js
-/**
- *  Abstract Building Animal
- *
- * @class Building
- */
 export default class Building {
   constructor(sqft = 0) {
     if (this.constructor !== Building
