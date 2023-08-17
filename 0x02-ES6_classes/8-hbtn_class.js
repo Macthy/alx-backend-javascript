@@ -1,20 +1,44 @@
 // 8-hbtn_class.js
 
+/**
+ * Build initial class
+ *
+ * @class HolbertonClass
+ */
 export default class HolbertonClass {
-  // Constructor for creating HolbertonClass objects with size and location
-  constructor(size, location) {
-    this._size = size; // Private attribute to store the size
-    this._location = location; // Private attribute to store the location
+  constructor(size = '', location = '') {
+    this.size = size;
+    this.location = location;
   }
 
-  // When the class is cast into a Number, it returns the size.
-  valueOf() {
+  [Symbol.toPrimitive](dataType) {
+    if (dataType === 'string') {
+      return (`${this.location}`);
+    } if (dataType === 'number') {
+      return (`${this.size}`);
+    }
+    return (`${this.location}`);
+  }
+
+  get size() {
     return this._size;
   }
 
-  // When the class is cast into a String, it returns the location.
-  toString() {
-    return this._location;
+  set size(value) {
+    if (typeof value !== 'number') {
+      throw new TypeError('size must be a number');
+    }
+    this._size = value;
+  }
+
+  get location() {
+    return this._code;
+  }
+
+  set location(value) {
+    if (typeof value !== 'string') {
+      throw new TypeError('size must be a string');
+    }
+    this._code = value;
   }
 }
-

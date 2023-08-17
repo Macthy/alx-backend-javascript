@@ -1,15 +1,39 @@
 // 7-airport.js
 
+/**
+ * Build initial class
+ *
+ * @class Airport
+ */
 export default class Airport {
-  // Constructor for creating Airport objects with name and code
-  constructor(name, code) {
-    this._name = name; // Private attribute to store the airport name
-    this._code = code; // Private attribute to store the airport code
+  constructor(name = '', code = '') {
+    this.name = name;
+    this.code = code;
   }
 
-  // Default string description of the class returns the airport code
-  toString() {
-    return `[object ${this._code}]`;
+  get [Symbol.toStringTag]() {
+    return `${this.code}`;
+  }
+
+  get name() {
+    return this._name;
+  }
+
+  set name(value) {
+    if (typeof value !== 'string') {
+      throw new TypeError('name must be a string');
+    }
+    this._name = value;
+  }
+
+  get code() {
+    return this._code;
+  }
+
+  set code(value) {
+    if (typeof value !== 'string') {
+      throw new TypeError('code must be a string');
+    }
+    this._code = value;
   }
 }
-

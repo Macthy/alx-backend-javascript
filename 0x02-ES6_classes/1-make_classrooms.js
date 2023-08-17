@@ -1,7 +1,7 @@
 // 1-make_classRooms.js
 
-import classRoom from './0-classRoom.js';
+import ClassRoom from './0-classRoom.js';
 
 export default function initializeRooms() {
-  return [ new classRoom(19), new classRoom(20), new classRoom(34) ];
+  return [ new ClassRoom(19), new ClassRoom(20), new ClassRoom(34) ];
 }

@@ -1,19 +1,20 @@
 // 5-building.js
-
+/**
+ *  Abstract Building Animal
+ *
+ * @class Building
+ */
 export default class Building {
-  // Constructor for creating Building objects with sqft
-  constructor(sqft) {
-    this._sqft = sqft; // Private attribute to store the square footage
+  constructor(sqft = 0) {
+    if (this.constructor !== Building
+        && typeof this.evacuationWarningMessage !== 'function') {
+      throw new Error('Class extending Building must override evacuationWarningMessage');
+    }
+
+    this._sqft = sqft;
   }
 
-  // Getter for retrieving the square footage
   get sqft() {
     return this._sqft;
   }
-
-  // Method to be implemented by the child class to display the evacuation warning message
-  evacuationWarningMessage() {
-    throw new Error('Class extending Building must override evacuationWarningMessage');
-  }
 }
-
