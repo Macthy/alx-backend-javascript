@@ -1,5 +1,3 @@
-// 1-make_classRooms.js
-
 import ClassRoom from './0-classRoom.js';
 
 export default function initializeRooms() {

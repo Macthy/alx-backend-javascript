@@ -1,4 +1,3 @@
-// 2-hbtn_course.js
 export default class HolbertonCourse {
   constructor(name = '', length = 0, students = []) {
     this.name = name;
