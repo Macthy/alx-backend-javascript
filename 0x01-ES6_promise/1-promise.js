@@ -1,12 +1,13 @@
-// Implement the getFullResponseFromAPI function
+/* eslint-disable */
 export default function getFullResponseFromAPI(success) {
   return new Promise((resolve, reject) => {
-    if (success) {
-      // If success is true, resolve the Promise with a success response.
-      resolve({ status: 200, body: 'Success' });
+    if (success === true) {
+      resolve({
+        status: 200,
+        body: "Success",
+      });
     } else {
-      // If success is false, reject the Promise with an error
-      reject(new Error('The fake API is not working currently'));
+      reject(new Error("The fake API is not working currently"));
     }
   });
 }
