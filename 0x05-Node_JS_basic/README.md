@@ -1,3 +1,4 @@
+```
 0x05. NodeJS Basics
 
 
@@ -60,14 +61,12 @@ mandatory
 In the file 0-console.js, create a function named displayMessage that prints in STDOUT the string argument.
 
 bob@dylan:~$ cat 0-main.js
-```
 const displayMessage = require('./0-console');
 
 displayMessage("Hello NodeJS!");
 
 bob@dylan:~$ node 0-main.js
 Hello NodeJS!
-```
 bob@dylan:~$
 Repo:
 
@@ -414,3 +413,4 @@ Repo:
 GitHub repository: alx-backend-javascript
 Directory: 0x05-Node_JS_basic
 File: full_server/utils.js, full_server/controllers/AppController.js, full_server/controllers/StudentsController.js, full_server/routes/index.js, full_server/server.js
+```
